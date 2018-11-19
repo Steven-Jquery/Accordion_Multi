@@ -16,17 +16,26 @@ $(document).ready(function(e){
 	$('[data-dropdown]').click(function(){
 		var self = this;
 		var target = $(self).data('dropdown');
-		var $other = $('[data-dropdown= "'+target+'"]');
-		if(target){
-			$other.each(function(index, el) {
-				if(el !== self){
-					$(el).removeClass('active');
-					// $(el).parent()..slideUp();
-				}else{
-					$(self).toggleClass('active');
-					$(self).next().slideToggle('fast');
+		var dataParent = $(self).data('parent');
+		var parent = $(self).closest(dataParent);
+		var content = $(self).next();
+		var $list = $('[data-dropdown= "'+ target +'"]');
+
+		$list.each(function(index, el) {
+			var siblings = $(self).parent().siblings().find(target);			
+			var child = $(self).parent().find(target);
+
+			if(el !== self){
+				parent.find($(el)).removeClass('active');
+				siblings.slideUp();
+				if(!$(self).hasClass('active')){
+					child.slideUp();
 				}
-			});
-		}
+			}else{
+				$(self).toggleClass('active');
+				content.slideToggle('fast');
+			}
+		});
+
 	});
 });

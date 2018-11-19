@@ -16,10 +16,10 @@
 				<div class="wrap-accordion">
 					<ul class="list-accordion">
 						<li class="item">
-							<a href="#" class="title active" data-dropdown=".sub-list">Title parent 1</a>
+							<a href="#" class="title active" data-parent=".list-accordion" data-dropdown=".sub-list">Title parent 1</a>
 							<ul class="sub-list" style="display: block">
 								<li class="sub-item">
-									<a href="#" class="title" data-dropdown=".sub-list">Title child 1</a>
+									<a href="#" class="title" data-parent=".sub-list" data-dropdown=".sub-list">Title child 1</a>
 									<ul class="sub-list">
 										<li class="item">
 											<a href="#" class="title">Title sub child 1</a>
@@ -36,7 +36,7 @@
 									<a href="#" class="title">Title child 2</a>
 								</li>
 								<li class="sub-item">
-									<a href="#" class="title" data-dropdown=".sub-list">Title child 3</a>
+									<a href="#" class="title" data-parent=".sub-list" data-dropdown=".sub-list">Title child 3</a>
 									<ul class="sub-list">
 										<li class="item">
 											<a href="#" class="title">Title sub child 1</a>
@@ -49,7 +49,7 @@
 							</ul>
 						</li>
 						<li class="item">
-							<a href="#" class="title" data-dropdown=".sub-list">Title parent 2</a>
+							<a href="#" class="title" data-parent=".list-accordion" data-dropdown=".sub-list">Title parent 2</a>
 							<ul class="sub-list">
 								<li class="sub-item no-sub-item">
 									<a href="#" class="title">Title child 1</a>
@@ -77,7 +77,7 @@
 							</ul>
 						</li>
 						<li class="item">
-							<a href="#" class="title" data-dropdown=".sub-list">Title parent 3</a>
+							<a href="#" class="title" data-parent=".list-accordion" data-dropdown=".sub-list">Title parent 3</a>
 							<ul class="sub-list">
 								<li class="sub-item no-sub-item">
 									<a href="#" class="title">Title child 1</a>
@@ -94,7 +94,7 @@
 							</ul>
 						</li>
 						<li class="item">
-							<a href="#" class="title" data-dropdown=".sub-list">Title parent 4</a>
+							<a href="#" class="title" data-parent=".list-accordion" data-dropdown=".sub-list">Title parent 4</a>
 							<ul class="sub-list">
 								<li class="sub-item no-sub-item">
 									<a href="#" class="title">Title child 1</a>
